@@ -1,6 +1,16 @@
-const msngooes = require('./src/msngooes');
-const mangooseUrl= "mongodb://localhost:27017/mangoose";
+const express = require('express');
+const connectToMongo = require('./db');
+connectToMongo();
 
-const connectToMango = () => {
+const app = express();
+const port = 5000;
 
-}
+app.use(express.json());
+
+// Correct route usage:
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/notes', require('./routes/notes'));
+
+app.listen(port, () => {
+    console.log(`Backend listening on http://localhost:${port}`);
+});
