@@ -1,19 +1,19 @@
 
 
-📄 Project Description
+##📄 Project Description
 iNoteBook Pro is a React.js-based web application designed to help users securely store, manage, and organize their personal notes. Whether you're a student, developer, or working professional, this app allows you to create, edit, delete, and categorize your notes with ease.
 The app supports Light/Dark mode, responsive design, and offers a clean and modern UI focused on productivity.
 
 
-🌐 Live Demo
+##🌐 Live Demo
 [🔗 Add your Netlify / Vercel / GitHub Pages Link here]
 
 
-📸 Screenshots
+##📸 Screenshots
 (Add screenshots here if available for better presentation on GitHub)
 
 
-🚀 Features
+##🚀 Features
 ✅ Create, Edit, and Delete Notes
 ✅ Organize Notes with Tags
 ✅ Light & Dark Mode for Better Readability
@@ -23,7 +23,7 @@ The app supports Light/Dark mode, responsive design, and offers a clean and mode
 ✅ React Context API for State Management
 
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 Frontend: React.js (Hooks, Context API)
 
 Styling: CSS3, Bootstrap 5
@@ -36,7 +36,7 @@ Deployment: Netlify / Vercel (Recommended)
 
 
 
-📦 Installation
+##📦 Installation
 
 Follow these steps to run iNoteBook Pro locally:
 
@@ -70,6 +70,6 @@ src/
 🧾 License
 This project is open-source and free to use for learning purposes.
 
-👨‍💻 Author
+##👨‍💻 Author
 Omkar Nivruti Haral
 https://github.com/omkarharal178
