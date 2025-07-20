@@ -22,21 +22,32 @@ function App() {
     }, 2000);
   };
 
-
-    
-    
+    // Light and Dark Mode
   
+    const [mode, setMode] = useState('light');
+    const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark');
+      document.body.style.backgroundColor = '#212529';
+      // showAlert('Dark mode has been enabled', 'success');
+    } else {
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      // showAlert('Light mode has been enabled', 'success');
+    }
+  };
+
     return (
         <NoteState>
             <Router> 
-                <Navbar />
+                <Navbar mode={mode} toggleMode={toggleMode}  />
                 <Alert alert={alert} />
                 <div className='container'>
                 <Routes>
-                    <Route path="/" element={<Home  showAlert={showAlert}/>} />
+                    <Route path="/" element={<Home  showAlert={showAlert} mode={mode} toggleMode={toggleMode}/>} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/login" element={<Login showAlert={showAlert}  />} />
-                    <Route path="/signup" element={<Signup showAlert={showAlert} />} />
+                    <Route path="/login" element={<Login showAlert={showAlert} mode={mode} toggleMode={toggleMode} />} />
+                    <Route path="/signup" element={<Signup showAlert={showAlert} mode={mode} toggleMode={toggleMode} />} />
                 </Routes>
                 </div>
             </Router>

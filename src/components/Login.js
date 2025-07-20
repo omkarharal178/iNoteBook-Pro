@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'; // Assuming you have a CSS file for styling
 
 const Login = (props) => {
 
@@ -37,46 +38,33 @@ const Login = (props) => {
         }
     }
 
-    return (
-        <>
-      <div className='container'mt-3>
-          <h2>Login To Continew iNoteBook Pro</h2>
-      </div>
-        <div className="container my-3">
-           
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label" >Email Address</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        name="email"
-                        value={credentials.email}
-                        onChange={onChange}
-                        required
-                        autoComplete="email"
-                    
-                        
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        name="password"
-                        value={credentials.password}
-                        onChange={onChange}
-                        required
-                        autoComplete="current-password"
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+     return (
+        <div className="login-container">
+            <form className="login-form" onSubmit={handleSubmit}>
+                <h2>iNoteBook Pro</h2>
+                <p className="login-subtitle">Login to manage your notes</p>
+                
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={credentials.email}
+                    onChange={onChange}
+                    required
+                />
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={credentials.password}
+                    onChange={onChange}
+                    required
+                />
+
+                <button type="submit" className="login-btn">Login</button>
             </form>
         </div>
-        </>
     );
 };
 
